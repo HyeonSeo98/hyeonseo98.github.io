@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박현서 포토폴리오</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js"></script>
+  <script defer src="./js/main.js"></script>
+  <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo"><a href="#!">HYEON SEO</a></div>
+      <div class="mob_menu_btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="mob_menu">
+        <nav>
+          <ul>
+            <li><p>01</p><a href="#about">ABOUT</a></li>
+            <li><p>02</p><a href="#skill">SKILL</a></li>
+            <li><p>03</p><a href="#project">PROJECT</a></li>
+            <li><p>04</p><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="menu">
+        <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skill">SKILL</a></li>
+            <li><a href="#project">PROJECT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="home">
+    <div class="container">
+      <p>
+        HS<br>
+        <span>POTOPOLIO</span>
+      </p>
+      <p>
+        꾸준하게 <span>성장</span>하고 싶은<br>
+        주니어 프론트엔드 개발자 박현서입니다. 🙇🏼‍♂️
+      </p>
+    </div>
+    <div class="mouse_scroll"></div>
+  </section>
+
+
+  <section id="about" class="about scroll_el">
+    <h2 class="origin postion_top">ABOUT ME</h2>
+    <div class="container origin postion_top">
+      <div class="left">
+        <div class="face2"><img src="./images/face04.jpg" alt=""></div>
+      </div>
+      <div class="right">
+        <div class="txt">
+          <p class="title">항상 밝게 웃고 긍정적인 박현서입니다😊</p>
+          <p class="sub">
+            저는 사람들과 소통하는 것과 부족한 점이나 안되는 부분을 해결하는 것에흥미를 느낍니다.
+            사용자가 웹을 편리하게 사용할수 있는 프론트엔드 개발자가 되기 위해 노력중인 박현서입니다.
+          </p>
+        </div>
+        <div class="info">
+          <div>
+            <p>👨‍💻</p>
+            <div class="txt">
+              <p class="title">이름</p>
+              <p>박현서</p>
+            </div>
+          </div>
+          <div>
+            <p>📅</p>
+            <div class="txt">
+              <p class="title">생년월일</p>
+              <p>1998/02/07</p>
+            </div>
+          </div>
+          <div>
+            <p>🗺</p>
+            <div class="txt">
+              <p class="title">주소지</p>
+              <p>부산광역시 기장</p>
+            </div>
+          </div>
+          <div>
+            <p>📞</p>
+            <div class="txt">
+              <p class="title">연락처</p>
+              <p>010-3812-8140</p>
+            </div>
+          </div>
+          <div>
+            <p>📧</p>
+            <div class="txt">
+              <p class="title">이메일</p>
+              <p>phseo8140@naver.com</p>
+            </div>
+          </div>
+          <div>
+            <p>🎓</p>
+            <div class="txt">
+              <p class="title">학력</p>
+              <p>동명대학교졸업</p>
+              <p>성지고등학교 졸업</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skill" class="skill scroll_el">
+    <h2 class="origin postion_top">SKILL📚</h2>
+    <div class="container origin postion_top">
+      <div class="skill_bar">
+
+        <div class="bar">
+          <div class="info">
+            <div class="img_box"><img src="./images/HTML_i.png" alt=""></div>
+            <p>HTML5</p>
+          </div>
+          <div class="line html"><span></span></div>
+          <div class="txt">웹사이트 레이아웃 구조 제작 등 가능</div>
+        </div>
+
+        <div class="bar">
+          <div class="info">
+            <div class="img_box"><img src="./images/CSS_i.png" alt=""></div>
+            <p>css</p>
+          </div>
+          <div class="line css"><span></span></div>
+          <div class="txt">CSS 스타일 적용 활용 미디어쿼리 등 가능</div>
+        </div>
+
+        <div class="bar">
+          <div class="info">
+            <div class="img_box"><img src="./images/Javascript_i.png" alt=""></div>
+            <p>Javascript</p>
+          </div>
+          <div class="line javascript"><span></span></div>
+          <div class="txt">JS 활용한 동적인 화면 구현 가능</div>
+        </div>
+
+        <div class="bar">
+          <div class="info">
+            <div class="img_box"><img src="./images/React_i.png" alt=""></div>
+            <p>React</p>
+          </div>
+          <div class="line react"><span></span></div>
+          <div class="txt">컴포넌트 랜더링,객체 데이터만들기, Router를 통한 render 활용 가능</div>
+        </div>
+
+        <div class="bar">
+          <div class="info">
+            <div class="img_box"><img src="./images/jQuery_i.png" alt=""></div>
+            <p>jQuery</p>
+          </div>
+          <div class="line jquery"><span></span></div>
+          <div class="txt">jQuery 슬라이드, 퀵메뉴 등 활용 가능</div>
+        </div>
+
+        <div class="bar">
+          <div class="info">
+            <div class="img_box"><img src="./images/GIT_i.png" alt=""></div>
+            <p>Git</p>
+          </div>
+          <div class="line git"><span></span></div>
+          <div class="txt">git 활용한 형상관리 가능</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="project" class="project scroll_el">
+    <h2 class="origin postion_top">PROJECT👨‍💻</h2>
+    <div class="container">
+
+      <div class="project01 gentle pro_scroll_el">
+      
+        <div class="pro_origin gentle postion_top">
+          <div class="title">GENTLE MONSTER(web)</div>
+        
+          <div class="pro_box">
+
+            <div class="left">
+              <img src="./images/gentle_pc.png" alt="">
+            </div>
+            
+            <div class="right">
+              <div class="txt">
+                <p>젠틀몬스터 리뉴얼(팀 프로젝트)</p>
+                <p>
+                젠틀 몬스터 사이트는 기존 메인페이지에서 상품정보제공,접근성 부족하여 고객이 사이트를 
+                접속하면 상품을 쉽게 접근할 수있도록 제작하였고 서브페이지에서 컬러만 다른상품은 상품아래 
+                색상을 mouseover 할수있는 부분을 만들어 사용성을 좋게 만들기위해 제작하였습니다.<br><br>
+                JS의 관련 기술 습득,내장함수 setinterval,parentNode, swiper슬라이드 라이브러리활용 방법을 익혔습니다.
+                </p>
+              </div>
+              <div class="my_tech">
+                <div class="my01">
+                  <p>➰주요기능</p>
+                  <p>서브페이지 장바구니담기, 찜하기버튼 count, setinterval을 통한 자동클래스추가, 삭제</p>
+                </div>
+                <div class="my02">
+                  <p>➰도메인</p>
+                  <p><a href="https://hyeonseo98.github.io/GentleMonster/" target="_blank">https://hyeonseo98.github.io/GentleMonster</a></p>
+                </div>
+                <div class="my03">
+                  <p>➰페이지구성</p>
+                  <p>MainPage / SubPage / Detail Page</p>
+                </div>
+                <div class="my04">
+                  <p>➰사용기술</p>
+                  <p>HTML / CSS / JS</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      
+      </div>
+
+      <div class="project01 react_gentle pro_scroll_el">
+
+        <div class="pro_origin postion_top">
+          <div class="title">GENTLE MONSTER(React)</div>
+
+          <div class="pro_box">
+
+            <div class="left">
+              <img src="./images/gentle_react.png" alt="">
+            </div>
+
+            <div class="right">
+              <div class="txt">
+                <p>젠틀몬스터 리뉴얼 리액트버전</p>
+                <p>
+                  젠틀몬스터 팀프로젝트를 통해 만든 것을 React 버전으로 만들었습니다.<br><br>
+                  React-Router 통한 라우팅방식과 모듈의 연계편집기능 redux를 통한상태관리 활용 방법을 익혔습니다.
+                </p>
+              </div>
+              <div class="my_tech">
+                <div class="my01">
+                  <p>➰주요기능</p>
+                  <p>장바구니담기,라우팅방식</p>
+                </div>
+                <div class="my02">
+                  <p>➰도메인</p>
+                  <p><a href="https://hyeonseo98.github.io/GenteleReact" target="_blank">https://hyeonseo98.github.io/GenteleReact</a></p>
+                </div>
+                <div class="my03">
+                  <p>➰페이지구성</p>
+                  <p>MainPage / SubPage / Detail Page</p>
+                </div>
+                <div class="my04">
+                  <p>➰사용기술</p>
+                  <p>React</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="project01 skMagic pro_scroll_el">
+      
+        <div class="pro_origin postion_top">
+          <div class="title">SKMAGIC(web)</div>
+        
+          <div class="pro_box">
+        
+            <div class="left">
+              <img src="./images/skmagic_pc.png" alt="">
+            </div>
+        
+            <div class="right">
+              <div class="txt">
+                <p>SKMGIC JS기능추가</p>
+                <p>
+                  skmagic사이트는 기존 정적인 웹사이트를 조금 더 동적인 웹사이트를 만들어보고자 gsap과 css transition을 활용하여 js 기능을 추가 하였습니다.<br><br>
+                  swiper,scrollTo,scrollMagic,gsap 라이브러리활용 방법등의 기술을 익혔습니다.
+                </p>
+              </div>
+              <div class="my_tech">
+                <div class="my01">
+                  <p>➰주요기능</p>
+                  <p>검색버튼, lnb메뉴, 스크롤이벤트</p>
+                </div>
+                <div class="my02">
+                  <p>➰도메인</p>
+                  <p><a href="https://hyeonseo98.github.io/SKMAGIC/" target="_blank">https://hyeonseo98.github.io/SKMAGIC/</a></p>
+                </div>
+                <div class="my03">
+                  <p>➰페이지구성</p>
+                  <p>MainPage</p>
+                </div>
+                <div class="my04">
+                  <p>➰사용기술</p>
+                  <p>HTML / CSS / JS / jQuery</p>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+      
+      
+      </div>
+
+      <div class="project01 nature pro_scroll_el">
+      
+        <div class="pro_origin postion_top">
+          <div class="title">NACTURE REBULIC(web,tablet,mobile)</div>
+        
+          <div class="pro_box">
+        
+            <div class="left">
+              <p><img src="./images/nature_pc.png" alt=""></p>
+              <p><img src="./images/nature_mob.png" alt=""></p>
+              <p><img src="./images/nature_tab.png" alt=""></p>
+            </div>
+        
+            <div class="right">
+              <div class="txt">
+                <p>네이처리퍼블릭 반응형 리뉴얼</p>
+                <p>
+                  네이처리퍼블릭 사이트를 반응형으로 제작하였고 BEST상품과 실시간 VIEW랭킹 컨텐츠를 메인페이지에 추가하였고 VIEW랭킹 컨텐츠는 setinterval 함수를 이용하여 자동으로 체크되도록 제작하였습니다.<br><br>
+                  css 미디어쿼리를 활용한 반응형,jQuery eq,fadein,fadeout 기능을 익혔습니다.
+                </p>
+              </div>
+              <div class="my_tech">
+                <div class="my01">
+                  <p>➰주요기능</p>
+                  <p>슬라이드 토글, 애니메이트 ,js setinerval을 활용한 자동 체크</p>
+                </div>
+                <div class="my02">
+                  <p>➰도메인</p>
+                  <p><a href="https://hyeonseo98.github.io/NATUREREPUBLIC/" target="_blank">https://hyeonseo98.github.io/NATUREREPUBLIC/</a></p>
+                </div>
+                <div class="my03">
+                  <p>➰페이지구성</p>
+                  <p>MainPage</p>
+                </div>
+                <div class="my04">
+                  <p>➰사용기술</p>
+                  <p>HTML / CSS / JS / jQuery</p>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+      
+      </div>
+
+      <div class="project01 ottugi pro_scroll_el">
+      
+        <div class="pro_origin postion_top">
+          <div class="title">OTTUGI(mobile)</div>
+        
+          <div class="pro_box">
+        
+            <div class="left">
+              <img src="./images/ottugi_mob.png" alt="">
+            </div>
+        
+            <div class="right">
+              <div class="txt">
+                <p>오뚜기 모바일 리뉴얼</p>
+                <p>
+                  오뚜기 페이지를 모바일 버전으로 제작하였고 기존 메인페이지에서는 회사소식이나 공지사항들만 있엇지만 메인페이지에서 상품 정보를 바로 제공함으로써 상품에 쉽게 접근 할수 있도록 제작 하였습니다.<br><br>
+                  HTML , CSS 제작 기법을 배웠으며 radio, check를 통해 슬라이드 제작방법을 익혔습니다.
+                </p>
+              </div>
+              <div class="my_tech">
+                <div class="my01">
+                  <p>➰주요기능</p>
+                  <p>radio,check버튼을 이용한 슬라이드제작</p>
+                </div>
+                <div class="my02">
+                  <p>➰도메인</p>
+                  <p><a href="https://hyeonseo98.github.io/OTTUGI/" target="_blank">https://hyeonseo98.github.io/OTTUGI/</a></p>
+                </div>
+                <div class="my03">
+                  <p>➰페이지구성</p>
+                  <p>Splash / MainPage / IntorducePage / Detail Page</p>
+                </div>
+                <div class="my04">
+                  <p>➰사용기술</p>
+                  <p>HTML / CSS</p>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>CONTACT🧤</h2>
+    <div class="container">
+      <p>
+        부족한 포토폴리오를 끝까지 봐주셔서 감사합니다.🙇🏼‍♂️<br>
+        저에게 관심이 생기신 분들은 아래 입력란에 작성후 보내주시면 감사하겠습니다
+      </p>
+
+      <div class="send_box">
+        
+        <div class="send">
+          <div class="mail_send">
+            <div class="name">
+              <p>이름</p>
+              <input type="text" id="toName">
+            </div>
+            <div class="mail">
+              <p>이메일</p>
+              <input type="e" id="toMail">
+            </div>
+            <div class="massage">
+              <p>메세지</p>
+              <textarea name="" id="toMsg" cols="30" rows="10"></textarea>
+            </div>
+            <button onclick="sendMail()">보내기</button>
+          </div>
+        </div>
+        
+        <div class="info">
+          <p>INFORMATION</p>
+          <div>
+            <p>👨‍💻</p>
+            <div class="txt">
+              <p class="title">이름</p>
+              <p>박현서</p>
+            </div>
+          </div>
+          
+          <div>
+            <p>📞</p>
+            <div class="txt">
+              <p class="title">연락처</pc>
+              <p>010-3812-8140</ㅔ>
+            </div>
+          </div>
+          
+          <div>
+            <p>📧</p>
+            <div class="txt">
+              <p class="title">이메일</p>
+              <p>phseo8140@naver.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      Copyright 2022. Web Front-end developer portfolio Hyeonseo PARK ✌
+    </div>
+  </footer>
+
+  <div class="quik">
+    <div><a href="https://github.com/HyeonSeo98" target="_blank"><img src="./images/git_w.png" alt=""></a></div>
+    <div><a href="#!"><img src="./images/insta_i.png" alt=""></a></div>
+    <div><a href="#!"><img src="./images/facebook_i.png" alt=""></a></div>
+    <p class="line"></p>
+  </div>
+
+
+</body>
+</html>

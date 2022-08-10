@@ -1,0 +1,753 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+/* common */
+* {margin: 0;padding: 0;box-sizing: border-box;}
+li {list-style: none;}
+a {text-decoration: none;color: #000;}
+body {font-family: 'Noto Sans KR', sans-serif;height: 3000px;background-color: #fff;}
+img {display: block;}
+
+:root {
+  --point : #5067FA;
+  --title : 1.3rem;
+  --font08 : .8rem;
+  --font09 : .9rem;
+  --font1 : 1rem;
+  --font2 : 1.1rem;
+  --font3 : 1.2rem;
+  --fontW : bold;
+  --sub : .9rem;
+}
+
+/* quik */
+.quik {
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+  display: none;
+}
+.quik>div {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+.quik>div:first-child {
+  padding: 3px;
+}
+.quik>div img {
+  width: 100%;
+}
+.quik .line {
+  width: 2px;
+  height: 50px;
+  margin: 0 auto;
+  background: #000;
+}
+
+
+/* header */
+header {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+}
+header .container {
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .logo {
+  width: 50%;
+}
+header .container .logo a {
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+}
+header .mob_menu_btn {
+  position: relative;
+  width: 10%;
+  height: 25px;
+  z-index: 101;
+}
+header .mob_menu_btn span {
+  display: block;
+  position: absolute;
+  border-radius: 20px;
+  background-color: #000;
+  transition: all 0.3s;
+}
+header .mob_menu_btn span:nth-child(1) {
+  width: 80%;
+  height: 2px;
+  top: 0;
+  right: 0;
+}
+header .mob_menu_btn span:nth-child(2) {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+header .mob_menu_btn span:nth-child(3) {
+  width: 60%;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+}
+
+header .mob_menu_btn.on span:nth-child(1) {
+  width: 100%;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(-45deg);
+}
+header .mob_menu_btn.on span:nth-child(2) {
+  opacity: 0;
+}
+header .mob_menu_btn.on span:nth-child(3) {
+  width: 100%;
+  bottom: 50%;
+  right: 0;
+  transform: translateY(50%) rotate(45deg);
+}
+
+
+
+header .mob_menu {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  transition: all 0.3s;
+}
+header .mob_menu nav {
+  width: 70%;
+  height: 100vh;
+  background: #e07a7a;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  z-index: 98;
+}
+header .mob_menu nav ul {
+  width: 100%;
+}
+header .mob_menu nav ul li {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+header .mob_menu nav ul li p {
+  color: #fff;
+  margin-bottom: 5px;
+  font-size: .9rem
+}
+header .mob_menu nav ul li a {
+  color: #fff;
+  font-size: var(--title);
+}
+header .mob_menu.on {
+  right: 0;
+}
+
+
+header .menu {
+  display: none;
+}
+header .menu ul {
+  display: flex;
+  gap: 10px;
+}
+header .menu ul li a {
+  padding: 15px;
+  color: #000;
+}
+
+
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home .container {
+  text-align: center;
+}
+.home .container p:nth-child(1) {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+.home .container p:nth-child(1) span {
+  font-size: 3.0rem;
+  font-weight: bold;
+}
+.home .container p:nth-child(2) {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.home .container p:nth-child(2) span {
+  font-size: 2.5rem;
+  color: #e07a7a;
+}
+
+.home .mouse_scroll {
+  z-index: 11;
+  position: fixed;
+  width: 32px;
+  height: 52px;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%,-50%);
+  border: 1px solid #000;
+  border-radius: 50px;
+  opacity: 1;
+  transition: all 0.6s;
+}
+.home .mouse_scroll::before,
+.home .mouse_scroll::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 1px solid #000;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%,-50%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: arrow 1s ease-in-out infinite;
+}
+.home .mouse_scroll::after {
+  top: 30%;
+  animation-delay: 0.3s;
+}
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 70%;
+  }
+}
+
+
+.origin {
+  opacity: 0;
+  transition: all 2s;
+}
+.origin.postion_top {
+  transform: translateY(150px);
+}
+.show .origin {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* project scroll */
+.pro_origin {
+  opacity: 0;
+  transition: all 1.5s;
+}
+.pro_origin.postion_top {
+  transform: translateY(150px);
+}
+.pro_show .pro_origin {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.about {
+  width: 100%;
+  padding: 100px 20px;
+  background: #f8f8f8;
+}
+.about h2 {
+  text-align: center;
+  margin-bottom: 30px;
+} 
+.about .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about .container .left {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.about .container .left .face2 {
+  width: 352px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.about .container .left .face2 img {
+  width: 100%;
+}
+
+.about .container .right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about .container .right .info {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about .container .right>.txt {
+  margin-bottom: 20px;
+  font-size: var(--font09);
+}
+.about .container .right>.txt .title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.about .container .right .info>div {
+  width: 50%;
+  display: flex;
+  font-size: var(--sub);
+  margin-bottom: 10px;
+}
+.about .container .right .info>div p:first-child {
+  font-size: 1.1rem;
+  margin-right: 5px;
+}
+.about .container .right .info>div .txt {
+  font-size: 1.1rem;
+  word-break: break-all;
+}
+.about .container .right .info>div .txt .title {
+  font-size: var(--font1);
+  font-weight: var(--fontW);
+}
+.about .container .right .info>div .txt>p {
+  font-size: var(--font08)
+}
+.about .container .right .info>div .txt span {
+  font-size: var(--font09)
+}
+
+
+
+
+/* skill */
+.skill {
+  width: 100%;
+  padding: 100px 20px;
+}
+.skill h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.skill .container .skill_bar {
+  width: 100%;
+}
+.skill .container .skill_bar .bar {
+  margin: 20px 0;
+  display: flex;
+  position: relative;
+}
+.skill .container .skill_bar .bar:hover .txt {
+  opacity: 1;
+  transform: translate(10%,-30%);
+}
+.skill .container .skill_bar .txt::before {
+  position: absolute;
+  content: '';
+  border-top: 15px solid #000;
+  border-left: 15px solid transparent;
+  transform: rotate(270deg);
+  bottom: -10px;
+  left: 40px;
+}
+.skill .container .skill_bar .txt {
+  position: absolute;
+  top: -30px;
+  transform: translateY(30%);
+  left: 7%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 13px;
+  opacity: 0;
+  background: #000;
+  color: #fff;
+  transition: all 0.3s;
+  border-radius: 8px;
+  padding: 0 12px;
+}
+
+.skill .container .skill_bar .bar .info {
+  width: 20%;
+}
+.skill .container .skill_bar .bar .info p {
+  font-size: var(--font08);
+  font-weight: 500;
+}
+.skill .container .skill_bar .bar .info .img_box {
+  width: 100%;
+
+}
+.skill .container .skill_bar .bar .info .img_box img {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+.skill .container .skill_bar .bar .info p {
+  text-align: center;
+}
+
+
+.skill .container .skill_bar .bar .line {
+  position: relative;
+  height: 40px;
+  width: 80%;
+  overflow: hidden;
+  background: #f0f0f0f0;
+  border-radius: 10px;
+  box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05),0px 1px rgba(255,255,255,0.8);
+  margin: auto 0;
+}
+.skill .container .skill_bar .bar .line span {
+  height: 100%;
+  width: 80%;
+  background: #e07a7a;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  animation-play-state: running;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.skill.show .container .skill_bar .bar .line span {
+  animation-delay: 1.8s;
+}
+
+.skill .container .skill_bar .bar .html span {
+  width: 90%;
+}
+.skill .container .skill_bar .bar .css span {
+  width: 90%;
+}
+.skill .container .skill_bar .bar .javascript span {
+  width: 90%;
+}
+.skill .container .skill_bar .bar .react span {
+  width: 80%;
+}
+.skill .container .skill_bar .bar .jquery span {
+  width: 70%;
+}
+.skill .container .skill_bar .bar .git span {
+  width: 70%;
+}
+.skill .container .skill_bar .bar .line span::after {
+  position: absolute;
+  content: "";
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.skill .container .skill_bar .bar .html span::after {
+  content: "90%";
+}
+.skill .container .skill_bar .bar .css span::after {
+  content: "90%";
+}
+.skill .container .skill_bar .bar .javascript span::after {
+  content: "90%";
+}
+.skill .container .skill_bar .bar .react span::after {
+  content: "80%";
+}
+.skill .container .skill_bar .bar .jquery span::after {
+  content: "70%";
+}
+.skill .container .skill_bar .bar .git span::after {
+  content: "70%";
+}
+
+
+
+/* project  */
+.project {
+  padding: 100px 20px;
+  background-color: #f8f8f8;
+}
+.project h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.project .container>div {
+  margin-bottom: 100px;
+}
+.project .container .title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 30px;
+}
+.project .container>div>div {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+}
+.project .container .pro_box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.project .container .left {
+  width: 100%;
+  padding: 30px 30px 10px;
+  position: relative;
+}
+.project .container .left img {
+  width: 100%;
+}
+.project .container .left p:nth-child(2) {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 15%;
+}
+.project .container .left p:nth-child(3) {
+  position: absolute;
+  left: 10px;
+  bottom: 20px;
+  width: 30%;
+}
+.project .container .right {
+  padding: 10px 30px 30px;
+  width: 100%;
+}
+.project .container .right .txt {
+  padding-bottom: 20px;
+}
+.project .container .right .txt p:nth-child(1) {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.project .container .right .txt p:nth-child(2) {
+  font-size: .8rem;
+  margin: 30px 0;
+}
+.project .container .right .my_tech {
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+.project .container .right .my_tech>div {
+  display: flex;
+  font-size: .8rem;
+  margin-bottom: 15px;
+}
+.project .container .right .my_tech>div:last-child {
+  margin: 0;
+}
+.project .container .right .my_tech>div p:first-child {
+  width: 30%
+}
+.project .container .right .my_tech>div p:last-child {
+  width: 70%;
+}
+.project .container .right .my_tech>div p:nth-child(2)>a {
+  word-break: break-word;
+}
+
+
+
+
+.contact {
+  padding: 100px 20px;
+}
+.contact h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.contact .container>p {
+  text-align: center;
+  font-size: .9em;
+  margin-bottom: 20px;
+}
+.contact .container .send_box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact .container .send_box .send {
+  width: 100%;
+  padding: 30px;
+  background: #fff;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+}
+.contact .container .send_box .send .mail_send {
+  width: 100%;
+  height: 270px;
+}
+.contact .container .send_box .send .mail_send>div {
+  display: flex;
+  margin-bottom: 15px;
+  height: 40px;
+}
+.contact .container .send_box .send .mail_send>div>p {
+  width: 80px;
+  line-height: 40px;
+  font-size: 14px;
+}
+.contact .container .send_box .send .mail_send>div input {
+  width: 100%;
+  background: #f2f2f2;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+}
+.contact .container .send_box .send .mail_send>div textarea {
+  width: 100%;
+  height: 100px;
+  background: #f2f2f2;
+  border: none;
+  outline: none;
+  padding: 15px 15px;
+}
+.contact .container .send_box .send .mail_send button {
+  display: block;
+  margin-top: 80px;
+  float: right;
+}
+
+.contact .container .info {
+  width: 100%;
+}
+.contact .container .info>p {
+  text-align: center;
+  font-size: .9rem;
+  margin-top: 20px;
+}
+
+.contact .container .info>div {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  font-size: .9rem;
+}
+
+
+footer {
+  border-top: 1px solid #ccc;
+}
+footer .container {
+  text-align: center;
+  padding: 20px 0;
+  /* font-size: 14px; */
+  font-size: .7rem;
+}
+
+
+
+
+
+
+/* TABLET */
+@media (min-width:768px) {
+  html {font-size: 17px;}
+  header .mob_menu_btn {
+    width: 5%;
+    height: 20px;
+  }
+  .about .container .left {
+    width: 50%;
+    margin: 0;
+  }
+  .about .container .right {
+    width: 50%;
+    padding: 0 30px;
+  }
+  .contact .container .send_box {
+    justify-content: center;
+  }
+
+  .contact .container .send {
+    width: 50% !important;
+  }
+
+  .contact .container .info {
+    width: 30%;
+    margin-top: 0;
+    margin-left: 30px;
+  }
+}
+
+
+/* WEB */
+@media (min-width:1280px) {
+  .quik {display: block;}
+  /* html {font-size: 20px;} */
+  header .container,
+  .about .container,
+  .skill .container,
+  .project .container,
+  .contact .container,
+  footer .container {
+    width: 1280px;
+    margin: 0 auto;
+  }
+  header .mob_menu {display: none;}
+  header .mob_menu_btn {display: none;}
+  header .menu {display: block;}
+  .project .container .pro_box .left {
+    width: 50%;
+    padding-bottom: 30px;
+  }
+  .project .container .pro_box .right {
+    width: 50%;
+  }
+  .contact .container .send_box {
+    justify-content: center;
+  }
+  .contact .container .send {
+    width: 50% !important;
+  }
+  .contact .container .info {
+    width: 30%;
+    margin-top: 0;
+    margin-left: 30px;
+  }
+  .skill .skill_bar {display: flex;flex-wrap: wrap;}
+  .skill .skill_bar>div {width: 50%;}
+}
